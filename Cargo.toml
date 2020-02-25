@@ -1,0 +1,11 @@
+[package]
+name = "miniquad-parameters"
+version = "0.1.0"
+authors = ["Ilya Sheprut <optitel223@gmail.com>"]
+edition = "2018"
+description = """
+Plugin for miniquad to use parameters in browser and console.
+"""
+
+[dependencies]
+lazy_static = "1.0"
