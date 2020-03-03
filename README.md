@@ -1,4 +1,4 @@
-# Plugin for miniquad: Query string in URL as command line parameters
+# Plugin for [miniquad](https://github.com/not-fl3/miniquad): Query string in URL as command line parameters
 
 This plugin allows you to get "command line parameters" from query string in URL. If you run your program like this in console:
 ```bash
@@ -31,8 +31,7 @@ myprog --k=1
 ```diff
   ...
 + <script src="params.js"></script>
-- <script>load("target.wasm");</script>
-+ <script>load("target.wasm", [{ register_plugin: params_register_js_plugin, set_wasm_refs: params_set_mem }]);</script>
+  <script>load("target.wasm");</script>
   ...
 ```
 * In your program use global lazy-static variable `PROGRAM_PARAMETERS: Vec<String>` to access the parameters.

@@ -28,3 +28,8 @@ params_register_js_plugin = function (importObject) {
         return ctx.entries[i][1][j].charCodeAt(0);
     }
 }
+
+miniquad_add_plugin({
+    register_plugin: params_register_js_plugin,
+    on_init: params_set_mem
+});
