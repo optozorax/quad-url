@@ -27,9 +27,11 @@ myprog --k=1
 # Usage
 
 * Copy `js/params.js` to your folder with `index.html`.
+* Do same thing for `js/sapp_jsutils.js` from [sapp-jsutils](https://github.com/not-fl3/sapp-jsutils).
 * Add plugin to your web page:
 ```diff
   ...
++ <script src="sapp_jsutils.js"></script>
 + <script src="params.js"></script>
   <script>load("target.wasm");</script>
   ...
