@@ -1,12 +1,19 @@
 [package]
-name = "miniquad-parameters"
-version = "0.1.1"
-authors = ["Ilya Sheprut <optitel223@gmail.com>"]
+name = "quad-url"
+version = "0.1.0"
+authors = ["Ilya Sheprut <optozorax@gmail.com>"]
 edition = "2018"
 description = """
-Plugin for miniquad to use parameters in browser and console.
+Plugin for macro-, mini-quad (quads) to do anything with url.
 """
 
 [dependencies]
-lazy_static = "1.0"
-sapp-jsutils = "0.1.1"
+sapp-jsutils = "0.1.4"
+
+[target.'cfg(any(target_os = "linux", target_os = "windows", target_os = "macos", target_os = "android"))'.dependencies]
+webbrowser = "0.5.5"
+
+[dev-dependencies]
+egui-macroquad = { path = "../egui-macroquad" }
+macroquad = { git = "https://github.com/not-fl3/macroquad", commit = "1257a2b" }
+egui = "0.10.0"

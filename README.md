@@ -1,51 +1,26 @@
-# Plugin for [miniquad](https://github.com/not-fl3/miniquad): Query string in URL as command line parameters
+# quad-url
 
-This plugin allows you to get "command line parameters" from query string in URL. If you run your program like this in console:
-```bash
-myprog -k=1 --begin --something="spa ce"
-```
-this was the same as run your program like this in browser:
-```
-http://.../index.html?k=1&begin&something=spa%20ce
-```
-with this plugin.
+[![Docs](https://docs.rs/quad-url/badge.svg?version=0.1.0)](https://docs.rs/quad-url/0.1.0/quad-url/index.html)
+[![Crates.io version](https://img.shields.io/crates/v/quad-url.svg)](https://crates.io/crates/quad-url)
 
-This works just by replacing key and value in this manner:
-```
-'k=1' => '-k=1'
-'begin' => '--begin'
-'something=spa%20ce' => '--something="spa ce"'
-```
+This is the crate to work with URL and open links in miniquad/macroquad environment.
 
-Also, this plugin supports unicode in query.
-
-Notice that one-leters keys in URL treated as single-dash always. So, you can't present this in address:
-```bash
-myprog --k=1
-```
+[Web demo.](https://optozorax.github.io/quad-url/?a&b=1&cd=e+f&gh#myhash)
 
 # Usage
-
-* Copy `js/params.js` to your folder with `index.html`.
-* Do same thing for `js/sapp_jsutils.js` from [sapp-jsutils](https://github.com/not-fl3/sapp-jsutils).
-* Add plugin to your web page:
-```diff
-  ...
-+ <script src="sapp_jsutils.js"></script>
-+ <script src="params.js"></script>
-  <script>load("target.wasm");</script>
-  ...
+Add this to your `Cargo.toml` dependencies:
+```text
+quad-url = "0.1.0"
 ```
-* In your program use global lazy-static variable `PROGRAM_PARAMETERS: Vec<String>` to access the parameters.
+# Usage in WASM
+Add file `<this repository>/js/quad-url.js` to your project.
 
-# Usage with `clap`
+Add file [`sapp-jsutils/js/sapp_jsutils.js`](https://github.com/not-fl3/sapp-jsutils/blob/4aa083662bfea725bf6e30453c009c6d02d667db/js/sapp_jsutils.js) file to your project. (version `0.1.4`, compatible with current crate)
 
-```rust
-use miniquad_parameters::PROGRAM_PARAMETERS;
 
-let app = App::new("myapp");
-
-// ...
-
-let matches = app.get_matches_from_safe_borrow(PROGRAM_PARAMETERS.iter());
+Add this lines after loading of `gl.js` and after loading of your wasm in your `index.html`:
+```html
+<script src="sapp_jsutils.js"></script>
+<script src="quad-url.js"></script>
 ```
+Done! Now you can use this crate.
