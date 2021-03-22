@@ -3,9 +3,13 @@ name = "quad-url"
 version = "0.1.0"
 authors = ["Ilya Sheprut <optozorax@gmail.com>"]
 edition = "2018"
+license = "MIT/Apache-2.0"
+homepage = "https://github.com/optozorax/quad-url"
+repository = "https://github.com/optozorax/quad-url"
 description = """
 Plugin for macro-, mini-quad (quads) to do anything with url.
 """
+readme="README.md"
 
 [dependencies]
 sapp-jsutils = "0.1.4"
