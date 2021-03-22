@@ -16,7 +16,7 @@
 //! Add file [`sapp-jsutils/js/sapp_jsutils.js`](https://github.com/not-fl3/sapp-jsutils/blob/4aa083662bfea725bf6e30453c009c6d02d667db/js/sapp_jsutils.js) file to your project. (version `0.1.4`, compatible with current crate)
 //!
 //!
-//! Add this lines after loading of `gl.js` and after loading of your wasm in your `index.html`:
+//! Add this lines after loading of `gl.js` and before loading of your wasm in your `index.html`:
 //! ```html
 //! <script src="sapp_jsutils.js"></script>
 //! <script src="quad-url.js"></script>
