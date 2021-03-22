@@ -13,7 +13,7 @@ Add this to your `Cargo.toml` dependencies:
 quad-url = "0.1.0"
 ```
 # Usage in WASM
-Add file `<this repository>/js/quad-url.js` to your project.
+Add file [`quad-url/js/quad-url.js`](https://github.com/optozorax/quad-url/blob/368519c488aac55b73d3f29ed99c1afb9091d989/js/quad-url.js) to your project.
 
 Add file [`sapp-jsutils/js/sapp_jsutils.js`](https://github.com/not-fl3/sapp-jsutils/blob/4aa083662bfea725bf6e30453c009c6d02d667db/js/sapp_jsutils.js) file to your project. (version `0.1.4`, compatible with current crate)
 
