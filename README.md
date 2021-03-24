@@ -1,6 +1,6 @@
 # quad-url
 
-[![Docs](https://docs.rs/quad-url/badge.svg?version=0.1.0)](https://docs.rs/quad-url/0.1.0/quad-url/index.html)
+[![Docs](https://docs.rs/quad-url/badge.svg?version=0.1.0)](https://docs.rs/quad-url/0.1.0/quad_url/)
 [![Crates.io version](https://img.shields.io/crates/v/quad-url.svg)](https://crates.io/crates/quad-url)
 
 This is the crate to work with URL and open links in miniquad/macroquad environment.
