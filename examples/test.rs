@@ -1,4 +1,3 @@
-use egui_macroquad::Egui;
 use macroquad::prelude::*;
 use quad_url::*;
 
@@ -12,8 +11,6 @@ fn window_conf() -> Conf {
 
 #[macroquad::main(window_conf)]
 async fn main() {
-    let mut egui = Egui::new();
-
     let mut parameters = get_program_parameters();
     let mut to_open = String::new();
     let mut new_tab = false;
@@ -32,7 +29,7 @@ async fn main() {
     loop {
         clear_background(WHITE);
 
-        egui.ui(|egui_ctx| {
+        egui_macroquad::ui(|egui_ctx| {
             egui::Window::new("Test").show(egui_ctx, |ui| {
                 ui.label("Url:");
                 ui.monospace(&url);
@@ -103,6 +100,8 @@ async fn main() {
                 }
             });
         });
+
+        egui_macroquad::draw();
 
         next_frame().await
     }

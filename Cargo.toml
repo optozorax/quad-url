@@ -18,6 +18,6 @@ sapp-jsutils = "0.1.4"
 webbrowser = "0.5.5"
 
 [dev-dependencies]
-egui-macroquad = { path = "../egui-macroquad" }
-macroquad = { git = "https://github.com/not-fl3/macroquad", commit = "1257a2b" }
+egui-macroquad = "0.1.0"
+macroquad = "0.3.0-alpha.16"
 egui = "0.10.0"
