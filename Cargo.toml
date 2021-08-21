@@ -11,7 +11,7 @@ Plugin for macro-, mini-quad (quads) to do anything with url.
 """
 readme="README.md"
 
-[dependencies]
+[target.'cfg(not(any(target_os = "linux", target_os = "windows", target_os = "macos", target_os = "android")))'.dependencies]
 sapp-jsutils = "0.1.4"
 
 [target.'cfg(any(target_os = "linux", target_os = "windows", target_os = "macos", target_os = "android"))'.dependencies]
