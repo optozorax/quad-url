@@ -128,7 +128,7 @@ pub fn path(full: bool) -> String {
         if full {
             std::env::args().collect::<Vec<_>>().join(" ")
         } else {
-            std::env::args().nth(0).unwrap()
+            std::env::args().next().unwrap()
         }
     }
 }
@@ -141,7 +141,7 @@ pub fn path(full: bool) -> String {
 pub fn easy_parse(param: &str) -> Option<(&str, Option<&str>)> {
     let skip_len = if param.starts_with("--") {
         "--".len()
-    } else if param.starts_with("-") {
+    } else if param.starts_with('-') {
         "-".len()
     } else {
         return None;
