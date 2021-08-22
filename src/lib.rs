@@ -23,13 +23,7 @@
 //! ```
 //! Done! Now you can use this crate.
 
-#[cfg(not(any(
-    target_os = "linux",
-    target_os = "windows",
-    target_os = "macos",
-    target_os = "android"
-)))]
-#[allow(unused_imports)]
+#[cfg(target_arch = "wasm32")]
 use sapp_jsutils::{JsObject, JsObjectWeak};
 
 #[no_mangle]
