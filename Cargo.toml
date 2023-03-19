@@ -15,7 +15,7 @@ readme="README.md"
 sapp-jsutils = "0.1.4"
 
 [target.'cfg(any(target_os = "linux", target_os = "windows", target_os = "macos", target_os = "android"))'.dependencies]
-webbrowser = "0.5.5"
+webbrowser = "0.8.8"
 
 [dev-dependencies]
 egui-macroquad = "0.1.0"
