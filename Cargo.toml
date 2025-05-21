@@ -1,6 +1,6 @@
 [package]
 name = "quad-url"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Ilya Sheprut <optozorax@gmail.com>"]
 edition = "2018"
 license = "MIT/Apache-2.0"
@@ -12,7 +12,7 @@ Plugin for macro-, mini-quad (quads) to do anything with url.
 readme="README.md"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-sapp-jsutils = "0.1.4"
+sapp-jsutils = "0.1.7"
 
 [target.'cfg(any(target_os = "linux", target_os = "windows", target_os = "macos", target_os = "android"))'.dependencies]
 webbrowser = "0.5.5"

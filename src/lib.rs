@@ -27,6 +27,7 @@
 use sapp_jsutils::{JsObject, JsObjectWeak};
 
 #[no_mangle]
+#[cfg(target_arch = "wasm32")]
 extern "C" fn quad_url_crate_version() -> u32 {
     let major = env!("CARGO_PKG_VERSION_MAJOR").parse::<u32>().unwrap();
     let minor = env!("CARGO_PKG_VERSION_MINOR").parse::<u32>().unwrap();
