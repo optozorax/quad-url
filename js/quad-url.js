@@ -80,5 +80,5 @@ miniquad_add_plugin({
     register_plugin: params_register_js_plugin,
     on_init: params_set_mem,
     name: "quad_url",
-    version: "0.1.2"
+    version: 65538
 });
